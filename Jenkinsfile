@@ -9,7 +9,7 @@ pipeline{
     parameters {
         choice(name: 'action', choices: 'create\ndelete', description: 'Select create or destroy.')
         
-        string(name: 'DOCKER_HUB_USERNAME', defaultValue: 'sevenajay', description: 'Docker Hub Username')
+        string(name: 'DOCKER_HUB_USERNAME', defaultValue: 'patilshravankumar3', description: 'Docker Hub Username')
         string(name: 'IMAGE_NAME', defaultValue: 'youtube', description: 'Docker Image Name')
     }
     tools{
@@ -27,7 +27,7 @@ pipeline{
         }
         stage('checkout from Git'){
             steps{
-                checkoutGit('https://github.com/Aj7Ay/Youtube-clone-app.git', 'main')
+                checkoutGit('https://github.com/Shravankumar1989/Youtube-clone-app.git', 'main')
             }
         }
         stage('sonarqube Analysis'){
